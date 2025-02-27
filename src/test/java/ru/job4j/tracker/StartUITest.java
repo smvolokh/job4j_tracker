@@ -56,7 +56,8 @@ class StartUITest {
                 new ExitAction(output)
         };
         new StartUI(output).init(input, tracker, actions);
-        assertThat(tracker.findById(item.getId())).isNull();
+        Item deleted = tracker.findById(item.getId());
+        assertThat(deleted).isNull();
     }
 
     @Test
