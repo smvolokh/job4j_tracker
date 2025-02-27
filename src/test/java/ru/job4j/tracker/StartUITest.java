@@ -152,7 +152,7 @@ class StartUITest {
         tracker.add(item1);
         tracker.add(item2);
         Input input = new MockInput(
-                new String[] {"0", "2", "1"}
+                new String[] {"0", String.valueOf(item2.getId()), "1"}
         );
         UserAction[] actions = new UserAction[]{
                 new FindByIdAction(output),
